@@ -1,0 +1,31 @@
+html, body, div, h1, p, img, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    background-color: #fff;
+}
+
+.container {
+    font-family: 'Nunito';
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header_text {
+    text-align: center;
+    color: #76beb9;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.gif_container {
+    text-align: center;
+    margin-bottom: 20px;
+}

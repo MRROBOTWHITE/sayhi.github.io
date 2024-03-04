@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="gif_container">
+            <img src="/home/whoami/code/public_html/erm-fingers.gif" alt="Heart" class="heart" width="100%" height="auto">
+        </div>
+        <div>
+            <h1 class="header_text">Пойдешь играть со мной в роблокс?</h1>
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Да</button>
+            <button class="btn" id="noButton">Нет</button>
+        </div>
+    </div>
+
+    <script>
+        function nextPage(){
+            window.location.href = "yes.html";
+        }
+
+        function moveButton(){
+            var button = document.getElementById("noButton");
+            var container = document.querySelector(".buttons");
+            var containerRect = container.getBoundingClientRect();
+
+            var randomX = Math.random() * (containerRect.width - button.offsetWidth);
+            var randomY = Math.random() * (containerRect.height - button.offsetHeight);
+
+            button.style.left = randomX + "px";
+            button.style.top = randomY + "px";
+            button.classList.add("move");
+        }
+
+        document.getElementById("noButton").addEventListener("touchstart", moveButton);
+        document.getElementById("noButton").addEventListener("click", moveButton);
+    </script>
+</body>
+</html>

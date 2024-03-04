@@ -1,0 +1,86 @@
+html, body, div, h1, p, img, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    background-color: #fff
+}
+
+.container {
+    font-family: 'Nunito';
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header_text {
+    text-align: center;
+    color: #76beb9;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.gif_container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+.heart {
+    animation: heartbeat 1s infinite;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+    
+}
+
+.btn {
+    background-color: #76beb9;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+#noButton {
+    margin-left: 10px; /* Add this line */
+}
+
+/* Styles for button movement */
+.move {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+}
